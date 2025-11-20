@@ -4,52 +4,110 @@
     <meta charset="UTF-8">
     <title>Asiye Kaymaz Özcanlı</title>
     <style>
-        body { font-family: Arial; max-width: 900px; margin: auto; padding: 20px; line-height: 1.6; }
-        h1 { font-size: 32px; margin-bottom: 5px; }
-        a { color: #0066cc; text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        .menu { margin-bottom: 30px; font-size: 18px; }
-        .menu a { margin-right: 10px; }
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            background: white;
+            margin: 40px auto;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            margin-top: 0;
+            font-size: 32px;
+        }
+
+        .menu {
+            margin-bottom: 25px;
+            font-size: 18px;
+        }
+
+        .menu a {
+            margin-right: 10px;
+            color: #0056b3;
+            text-decoration: none;
+        }
+
+        .menu a:hover {
+            text-decoration: underline;
+        }
+
+        .profile-section {
+            display: flex;
+            align-items: flex-start;
+            gap: 25px;
+        }
+
+        .profile-section img {
+            width: 180px;
+            border-radius: 8px;
+            box-shadow: 0 0 8px rgba(0,0,0,0.2);
+        }
+
+        p {
+            line-height: 1.6;
+            font-size: 17px;
+        }
+
+        @media(max-width: 700px) {
+            .profile-section {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .profile-section img {
+                width: 60%;
+                margin: 0 auto;
+            }
+        }
     </style>
 </head>
+
 <body>
 
-<h1>Asiye Kaymaz Özcanlı</h1>
+<div class="container">
 
-<div class="menu">
-    <a href="index.html">About Me</a> |
-    <a href="research.html">Research</a> |
-    <a href="teaching.html">Teaching</a> |
-    <a href="publications.html">Publications</a> |
-    <a href="people.html">People</a>
+    <h1>Asiye Kaymaz Özcanlı</h1>
+
+    <div class="menu">
+        <a href="index.html">About Me</a> |
+        <a href="research.html">Research</a> |
+        <a href="teaching.html">Teaching</a> |
+        <a href="publications.html">Publications</a> |
+        <a href="people.html">People</a>
+    </div>
+
+    <div class="profile-section">
+        <img src="profile.jpg" alt="Profile Photo">
+
+        <p>
+        I am Asiye Kaymaz Özcanlı, an Assistant Professor in the Department of Electrical and Electronics Engineering at Fatih Sultan Mehmet Vakıf University. I recently served as a visiting researcher (2024–2025) in the Department of Engineering and Public Policy at Carnegie Mellon University through the TÜBİTAK 2219 postdoctoral fellowship program, where I worked with Prof. Ramteen Sioshansi on projects examining how electric-vehicle batteries can enhance electricity-supply resilience for residential customers. I received my B.S. and double-major degree in Electrical Engineering and Mechanical Engineering from Yıldız Technical University in 2010, followed by my M.S. and Ph.D. degrees in Electrical Engineering in 2016 and 2022, respectively. My broader research interests include renewable-energy integration, microgrids, outage prediction, machine-learning-based energy forecasting, battery-storage modeling, and developing data-driven tools for modern power-system applications.
+        </p>
+    </div>
+
+    <br>
+
+    <p>
+        <b>Google Scholar:</b> 
+        <a href="https://scholar.google.com/citations?user=qLtFSBUAAAAJ" target="_blank">
+        https://scholar.google.com/citations?user=qLtFSBUAAAAJ</a>
+        <br>
+        <b>ORCID:</b> 
+        <a href="https://orcid.org/0000-0001-5536-5371" target="_blank">
+        0000-0001-5536-5371</a>
+        <br>
+        <b>Email:</b> akaymazozcanli@fsm.edu.tr
+    </p>
+
 </div>
-
-<p>
-I am Asiye Kaymaz Özcanlı, an Assistant Professor in the Department of Electrical and Electronics Engineering at Fatih Sultan Mehmet Vakıf University. I recently served as a visiting researcher (2024–2025) in the Department of Engineering and Public Policy at Carnegie Mellon University through the TÜBİTAK 2219 postdoctoral fellowship program, where I worked with Prof. Ramteen Sioshansi on projects examining how electric-vehicle batteries can enhance electricity-supply resilience for residential customers. I received my B.S. and double-major degree in Electrical Engineering and Mechanical Engineering from Yıldız Technical University in 2010, followed by my M.S. and Ph.D. degrees in Electrical Engineering in 2016 and 2022, respectively. My doctoral dissertation, “Development of a Passive Islanding Detection Method Using Deep Learning for Microgrids,” focused on AI-based stability assessment methods for distributed-generation systems. My broader research interests include renewable-energy integration, microgrids, energy-storage technologies, electric vehicles, outage prediction, battery-resilience modeling, and the use of machine-learning techniques to develop data-driven solutions for modern electricity-system applications.
-
-
-
-
-<h3>Collaboration & Student Opportunities</h3>
-
-<p>
-I am open to collaboration on topics related to power systems, renewable-energy integration, microgrids, battery modeling, and machine-learning applications in energy systems.
-</p>
-
-<p>
-<b>Google Scholar:</b> 
-<a href="https://scholar.google.com/citations?user=qLtFSBUAAAAJ" target="_blank">
-https://scholar.google.com/citations?user=qLtFSBUAAAAJ</a>
-<br>
-<b>ORCID:</b> 
-<a href="https://orcid.org/0000-0001-5536-5371" target="_blank">
-0000-0001-5536-5371</a>
-<br>
-<b>Email:</b> akaymazozcanli@fsm.edu.tr
-</p>
 
 </body>
 </html>
-
-</html>
-
