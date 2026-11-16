@@ -44,7 +44,7 @@
                 <li>Outage prediction and reliability modeling</li>
             </ul>
             <ul class="related">
-                <li>Topology-aware gap analysis for national DC fast-charging networks: The case of Türkiye (<a href="https://doi.org/10.1016/j.epsr.2026.113922" target="_blank" rel="noopener">Electric Power Systems Research</a>)</li>
+                <li>Topology-aware gap analysis for national DC fast-charging networks: The case of Türkiye (<a href="https://doi.org/10.1016/j.epsr.2026.113922" target="_blank" rel="noopener">Electric Power Systems Research</a>) · <a href="#charging">results below</a></li>
                 <li>A digital twin-based economic MPC framework for industrial cold storage energy arbitrage (ASYU, 2026)</li>
                 <li>Postdoctoral work at Carnegie Mellon University on electric-vehicle batteries and residential supply resilience</li>
             </ul>
@@ -94,6 +94,38 @@
             </ul>
         </article>
     </div>
+
+    <section id="charging" aria-labelledby="ch-title">
+        <div class="section-head"><h2 id="ch-title">Where Türkiye's fast-charging network breaks</h2></div>
+        <p class="lede">Counting charging stations does not show whether an electric vehicle can complete a long intercity trip. This study treats the national intercity road network as a graph, places the public DC fast-charging stations on it, and measures how much of the corridor length stays within reach of a charger.</p>
+
+        <div class="stats reveal">
+            <div class="stat"><div class="big">86.72<small>%</small></div><p>of the analysed primary corridor network meets the Minimum Viable Coverage (MVC) criterion with the existing stations.</p></div>
+            <div class="stat"><div class="big">72.8<small>%</small></div><p>of national traffic-weighted accessibility comes from the top ten provinces. The bottom 40% of provinces contribute about 2.2%.</p></div>
+            <div class="stat"><div class="big">46</div><p>candidate stations, placed at the centres of gap chains, raise national coverage to 91.22%.</p></div>
+            <div class="stat"><div class="big">≈3,400<small> km</small></div><p>of previously disconnected primary corridor is recovered. Coverage improves in 34 of 81 provinces.</p></div>
+        </div>
+
+        <div class="bars reveal">
+            <div>
+                <h3>Primary-corridor coverage (MVC)</h3>
+                <div class="bar-row"><span class="lbl">Existing network</span><div class="track"><span style="width:86.72%"></span></div><span class="val">86.72%</span></div>
+                <div class="bar-row"><span class="lbl">With 46 targeted stations</span><div class="track"><span class="hi" style="width:91.22%"></span></div><span class="val">91.22%</span></div>
+            </div>
+            <div>
+                <h3>Share of traffic-weighted accessibility</h3>
+                <div class="bar-row"><span class="lbl">Top ten provinces</span><div class="track"><span class="hi" style="width:72.8%"></span></div><span class="val">72.8%</span></div>
+                <div class="bar-row"><span class="lbl">Bottom 40% of provinces</span><div class="track"><span style="width:2.2%"></span></div><span class="val">2.2%</span></div>
+            </div>
+        </div>
+
+        <ul class="note-list">
+            <li>Method: multi-source shortest-path analysis on the motorway and trunk road network, with public DC fast-charging stations (50 kW and above) as seed nodes and an 80 km threshold.</li>
+            <li>In structurally underserved provinces, the targeted stations give relative coverage improvements of up to 62%.</li>
+            <li>Limits: the framework measures spatial and topological sufficiency of corridors. It has not been validated with charging usage data and does not model queueing, charger reliability or station power capacity.</li>
+        </ul>
+        <p class="source">Source: A. Kaymaz Özcanlı, “Topology-aware gap analysis for national DC fast-charging networks: The case of Türkiye”, Electric Power Systems Research 265 (2027) 113922. <a href="https://doi.org/10.1016/j.epsr.2026.113922" target="_blank" rel="noopener">doi.org/10.1016/j.epsr.2026.113922</a></p>
+    </section>
 
     <section id="market-data" aria-labelledby="md-title">
         <div class="section-head"><h2 id="md-title">Reading Türkiye's electricity market through open data</h2></div>
