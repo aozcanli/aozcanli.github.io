@@ -1,39 +1,140 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Research – Asiye Kaymaz Özcanlı</title>
-    <style>
-        body { font-family: Arial; max-width: 850px; margin: auto; padding: 20px; line-height: 1.6; }
-        h1 { border-bottom: 2px solid #ccc; padding-bottom: 10px; }
-        a { color: #0066cc; text-decoration: none; }
-        a:hover { text-decoration: underline; }
-    </style>
+    <meta name="description" content="Research areas of Asiye Kaymaz Özcanlı: grid resilience and storage, electricity market open data, agrivoltaics and deep learning for microgrids.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="assets/style.css">
+    <script src="assets/site.js" defer></script>
 </head>
 <body>
 
-<h1>Research</h1>
+<header class="site-header">
+    <div class="wrap">
+        <a class="site-name" href="index.html">Asiye Kaymaz Özcanlı</a>
+        <nav class="menu" aria-label="Main">
+            <a href="index.html">About Me</a>
+            <a href="research.html" aria-current="page">Research</a>
+            <a href="teaching.html">Teaching</a>
+            <a href="publications.html">Publications</a>
+            <a href="photos.html">Photos</a>
+        </nav>
+    </div>
+    <div class="wrap"><div class="ruler" aria-hidden="true"></div></div>
+</header>
 
-<div style="margin-bottom: 30px;">
-    <a href="index.html">About Me</a> |
-    <a href="research.html">Research</a> |
-    <a href="teaching.html">Teaching</a> |
-    <a href="publications.html">Publications</a> |
-    <a href="people.html">People</a>
-</div>
+<main class="wrap">
 
-<h3>Research Areas</h3>
+    <p class="eyebrow">Research</p>
+    <h1>Research</h1>
+    <p class="lede">Four connected areas, from the inverter to the national electricity market.</p>
 
-<ul>
-    <li>Agrivoltaics and GIS-based land suitability</li>
-    <li>Microgrids and islanding detection</li>
-    <li>Deep learning applications in power systems</li>
-    <li>Energy consumption forecasting</li>
-    <li>Battery storage modeling and resilience analysis</li>
-    <li>Outage prediction and reliability modeling</li>
-    <li>Renewable energy integration</li>
-    <li>Energy economics & demand response</li>
-</ul>
+    <div class="section-head"><h2>Research Areas</h2></div>
+
+    <div class="themes">
+        <article class="theme reveal" id="resilience">
+            <span class="num">01</span>
+            <h3>Grid resilience and storage</h3>
+            <p>How battery storage, including electric-vehicle batteries, can keep customers supplied during outages, and where charging infrastructure falls short.</p>
+            <ul class="tags">
+                <li>Battery storage modeling and resilience analysis</li>
+                <li>Outage prediction and reliability modeling</li>
+            </ul>
+            <ul class="related">
+                <li>Topology-aware gap analysis for national DC fast-charging networks: The case of Türkiye (<a href="https://doi.org/10.1016/j.epsr.2026.113922" target="_blank" rel="noopener">Electric Power Systems Research</a>)</li>
+                <li>A digital twin-based economic MPC framework for industrial cold storage energy arbitrage (ASYU, 2026)</li>
+                <li>Postdoctoral work at Carnegie Mellon University on electric-vehicle batteries and residential supply resilience</li>
+            </ul>
+        </article>
+
+        <article class="theme reveal" id="open-data">
+            <span class="num">02</span>
+            <h3>Electricity market open data</h3>
+            <p>Using Türkiye's public electricity market data to describe plant outages, hydropower and wind generation, and to forecast them.</p>
+            <ul class="tags">
+                <li>Energy consumption forecasting</li>
+                <li>Energy economics &amp; demand response</li>
+            </ul>
+            <ul class="related">
+                <li>Day ahead hourly hydroelectric generation forecasting and the role of market and weather in the Fırat Dicle Basin (IEEE ATEEC, 2026)</li>
+                <li>A site-specific ensemble learning framework for daily wind power forecasting (Journal of Engineering Sciences and Design, 2026)</li>
+                <li><a href="#market-data">Examples from the data, below</a></li>
+            </ul>
+        </article>
+
+        <article class="theme reveal" id="agrivoltaics">
+            <span class="num">03</span>
+            <h3>Agrivoltaics and land suitability</h3>
+            <p>Where solar generation and agriculture can share the same land, and how solar-powered irrigation compares in cost.</p>
+            <ul class="tags">
+                <li>Agrivoltaics and GIS-based land suitability</li>
+                <li>Renewable energy integration</li>
+            </ul>
+            <ul class="related">
+                <li>Techno-economic assessment of grid-connected and off-grid solar water pumping for sugar beet irrigation in Konya, Türkiye (<a href="https://doi.org/10.3390/su18104786" target="_blank" rel="noopener">Sustainability</a>)</li>
+                <li>A hybrid geospatial framework integrating AHP and K-means clustering for agrivoltaic site suitability assessment: the case of Konya, Türkiye (Pamukkale University Journal of Engineering Sciences, 2026)</li>
+            </ul>
+        </article>
+
+        <article class="theme reveal" id="microgrids">
+            <span class="num">04</span>
+            <h3>Deep learning for microgrids</h3>
+            <p>Detecting islanding in microgrids with deep learning, and studying harmonic distortion in inverter-based systems.</p>
+            <ul class="tags">
+                <li>Microgrids and islanding detection</li>
+                <li>Deep learning applications in power systems</li>
+            </ul>
+            <ul class="related">
+                <li>Islanding detection in microgrid using deep learning based on 1D CNN and CNN-LSTM networks (<a href="https://doi.org/10.1016/j.segan.2022.100839" target="_blank" rel="noopener">Sustainable Energy, Grids and Networks</a>)</li>
+                <li>A novel Multi-LSTM based deep learning method for islanding detection in the microgrid (<a href="https://doi.org/10.1016/j.epsr.2021.107574" target="_blank" rel="noopener">Electric Power Systems Research</a>)</li>
+                <li>Deep learning methods and applications for electrical power systems: A comprehensive review (<a href="https://doi.org/10.1002/er.5331" target="_blank" rel="noopener">International Journal of Energy Research</a>)</li>
+            </ul>
+        </article>
+    </div>
+
+    <section id="market-data" aria-labelledby="md-title">
+        <div class="section-head"><h2 id="md-title">Reading Türkiye's electricity market through open data</h2></div>
+        <p class="lede">Power plants in Türkiye report outages and maintenance as public market messages. These descriptive figures come from my analysis of those messages. They are independent academic work and are not published by the market operator.</p>
+
+        <div class="figure reveal">
+            <a class="zoom" href="images/research/outages-by-year-and-fuel.png"><img src="images/research/outages-by-year-and-fuel.png" alt="Stacked bar charts of outage events per year and unavailable energy per year by fuel type, 2012 to 2026" loading="lazy" width="2107" height="988"></a>
+            <div>
+                <h3>Plant outages by year and fuel</h3>
+                <p>(a) Outage events started each year, by plant type. (b) Unavailable energy each year: installed minus available capacity, multiplied by duration, with each event capped at seven days. Black dashes show the totals without the cap.</p>
+                <p class="caveat">Reporting rules differ before 2018 (grey area), so earlier years are not directly comparable. 2026 is a partial year.</p>
+                <p class="source">Source: EPİAŞ Transparency Platform, market message system (PMS). Own calculations.</p>
+            </div>
+        </div>
+
+        <div class="figure reveal">
+            <a class="zoom" href="images/research/outage-start-hour.png"><img src="images/research/outage-start-hour.png" alt="Heat maps of outage start hour by month of the year and by day of the week, 2018 to 2025" loading="lazy" width="2101" height="843"></a>
+            <div>
+                <h3>When outages are reported to start</h3>
+                <p>Start hour of outage events by (a) month and (b) weekday, 2018–2025, on a logarithmic colour scale.</p>
+                <p class="caveat">The bright band at hour 0 mainly reflects how messages are entered (declarations that start at 00:00), not a physical peak at midnight.</p>
+                <p class="source">Source: EPİAŞ Transparency Platform, market message system (PMS). Own calculations.</p>
+            </div>
+        </div>
+
+        <div class="figure reveal">
+            <a class="zoom" href="images/research/hydro-water-messages.png"><img src="images/research/hydro-water-messages.png" alt="Heat map by year and month of the share of hydropower fault messages that mention water, 2018 to 2026" loading="lazy" width="2700" height="1440"></a>
+            <div>
+                <h3>Hydropower messages that mention water</h3>
+                <p>Share of hydropower fault messages, by year and month, whose text matches a narrow set of water-related keywords.</p>
+                <p class="caveat">Descriptive only. The labels are automatic and have not been validated by hand. Cells with fewer than 30 messages are left blank.</p>
+                <p class="source">Source: EPİAŞ Transparency Platform, market message system (PMS), hydropower units. Own calculations.</p>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <div class="wrap">Asiye Kaymaz Özcanlı · Fatih Sultan Mehmet Vakıf University, Istanbul</div>
+</footer>
 
 </body>
 </html>

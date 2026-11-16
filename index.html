@@ -1,139 +1,111 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Asiye Kaymaz Özcanlı</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #f2f2f2;
-            margin: 0;
-            padding: 0;
-        }
-
-        .container {
-            max-width: 900px;
-            background: white;
-            margin: 40px auto;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 0 15px rgba(0,0,0,0.1);
-        }
-
-        h1 {
-            margin-top: 0;
-            font-size: 32px;
-        }
-
-        .menu {
-            margin-bottom: 25px;
-            font-size: 18px;
-        }
-
-        .menu a {
-            margin-right: 10px;
-            color: #0056b3;
-            text-decoration: none;
-        }
-
-        .menu a:hover {
-            text-decoration: underline;
-        }
-
-        .profile-section {
-            display: flex;
-            align-items: flex-start;
-            gap: 25px;
-        }
-
-        .profile-section img {
-            width: 260px;
-            border-radius: 12px;
-            box-shadow: 0 0 8px rgba(0,0,0,0.2);
-            object-fit: cover;
-        }
-
-        p {
-            line-height: 1.6;
-            font-size: 17px;
-        }
-
-        @media(max-width: 700px) {
-            .profile-section {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .profile-section img {
-                width: 70%;
-                margin: 0 auto;
-            }
-        }
-    </style>
+    <meta name="description" content="Asiye Kaymaz Özcanlı, Assistant Professor of Electrical and Electronics Engineering at Fatih Sultan Mehmet Vakıf University. Renewable energy integration, grid resilience, storage and electricity market data.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="assets/style.css">
+    <script src="assets/site.js" defer></script>
 </head>
-
 <body>
 
-<div class="container">
-
-    <h1>Asiye Kaymaz Özcanlı</h1>
-
-    <div class="menu">
-        <a href="index.html">About Me</a> |
-        <a href="research.html">Research</a> |
-        <a href="teaching.html">Teaching</a> |
-        <a href="publications.html">Publications</a> |
-        <a href="people.html">People</a> |
-        <a href="photos.html">Photos</a>
+<header class="site-header">
+    <div class="wrap">
+        <a class="site-name" href="index.html">Asiye Kaymaz Özcanlı</a>
+        <nav class="menu" aria-label="Main">
+            <a href="index.html" aria-current="page">About Me</a>
+            <a href="research.html">Research</a>
+            <a href="teaching.html">Teaching</a>
+            <a href="publications.html">Publications</a>
+            <a href="photos.html">Photos</a>
+        </nav>
     </div>
+    <div class="wrap"><div class="ruler" aria-hidden="true"></div></div>
+</header>
 
-    <!-- FOTOĞRAF + BİYOGRAFİ -->
-<div class="profile-section">
+<main class="wrap">
 
-    <!-- FOTOĞRAF -->
-    <img src="61EA26AB-36F2-48CF-BFD8-0C0C8775A0C1.jpeg" 
-         alt="Asiye Kaymaz Özcanlı"
-         style="width:220px; border-radius:12px; margin-right:25px;">
-
-        <!-- METİN -->
+    <section class="hero">
         <div>
+            <p class="eyebrow">Assistant Professor · Electrical and Electronics Engineering</p>
+            <h1>Keeping electricity reliable as the grid changes.</h1>
+            <svg class="curve" viewBox="0 0 520 46" aria-hidden="true">
+                <path d="M2 34 C 40 40, 70 42, 100 38 S 150 14, 190 16 S 250 26, 290 22 S 350 4, 390 6 S 460 30, 518 32"/>
+            </svg>
+            <p class="curve-note">Illustration: the shape of a daily electricity demand curve.</p>
+
             <p>
-            I am Asiye Kaymaz Özcanlı, an Assistant Professor in the Department of Electrical and 
-            Electronics Engineering at Fatih Sultan Mehmet Vakıf University. 
-            I recently served as a visiting post-doc researcher (2024–2025) in the Department of Engineering 
-            and Public Policy at Carnegie Mellon University through the TÜBİTAK 2219 postdoctoral 
-            fellowship program, where I worked with Prof. Ramteen Sioshansi on projects examining 
+            I am Asiye Kaymaz Özcanlı, an Assistant Professor in the Department of Electrical and
+            Electronics Engineering at Fatih Sultan Mehmet Vakıf University.
+            I recently served as a visiting postdoctoral researcher (February 2024 – July 2025) in the Department of Engineering
+            and Public Policy at Carnegie Mellon University through the TÜBİTAK 2219 postdoctoral
+            fellowship program, where I worked with Prof. Ramteen Sioshansi on projects examining
             how electric-vehicle batteries can enhance electricity-supply resilience for residential customers.
             </p>
 
             <p>
-            I received my B.S. and double-major degree in Electrical Engineering and Mechanical 
-            Engineering from Yıldız Technical University in 2010, followed by my M.S. and Ph.D. 
-            degrees in Electrical Engineering in 2016 and 2022. My research interests 
-            include renewable energy integration, microgrids, outage probability, battery storage modeling, 
+            I received my B.S. and double-major degree in Electrical Engineering and Mechanical
+            Engineering from Yıldız Technical University in 2010, followed by my M.S. and Ph.D.
+            degrees in Electrical Engineering in 2016 and 2022. My research interests
+            include renewable energy integration, microgrids, outage probability, battery storage modeling,
+            electricity market data analysis, agrivoltaics,
             and machine learning applications for modern power-system applications.
             </p>
         </div>
 
+        <img class="portrait" src="61EA26AB-36F2-48CF-BFD8-0C0C8775A0C1.jpeg" alt="Asiye Kaymaz Özcanlı" width="560" height="426">
+    </section>
+
+    <section class="reveal" aria-labelledby="work-title">
+        <div class="section-head"><h2 id="work-title">What I work on</h2></div>
+        <div class="tiles">
+            <a class="tile" href="research.html#resilience">
+                <span class="num">01</span>
+                <h3>Grid resilience and storage</h3>
+                <p>Batteries, electric vehicles and charging networks when the grid is under stress.</p>
+            </a>
+            <a class="tile" href="research.html#open-data">
+                <span class="num">02</span>
+                <h3>Electricity market open data</h3>
+                <p>What Türkiye's public market data shows about plant outages, hydropower and wind.</p>
+            </a>
+            <a class="tile" href="research.html#agrivoltaics">
+                <span class="num">03</span>
+                <h3>Agrivoltaics and land</h3>
+                <p>Where solar and farming can share land, and what solar irrigation costs.</p>
+            </a>
+            <a class="tile" href="research.html#microgrids">
+                <span class="num">04</span>
+                <h3>Deep learning for microgrids</h3>
+                <p>Detecting islanding and other events in inverter-based microgrids.</p>
+            </a>
+        </div>
+    </section>
+
+    <section class="callout reveal" aria-labelledby="join-title">
+        <div>
+            <h2 id="join-title">Work with me</h2>
+            <p>I welcome messages from students who want to do thesis or project work on these topics,
+            and from researchers and organisations interested in joint projects.</p>
+            <p>Write a few lines about what you would like to work on and attach your CV.</p>
+        </div>
+        <div><a class="btn" href="mailto:akaymazozcanli@fsm.edu.tr">Send an email</a></div>
+    </section>
+
+    <div class="contact">
+        <div><b>Google Scholar</b> <a href="https://scholar.google.com/citations?user=qLtFSBUAAAAJ" target="_blank" rel="noopener">scholar.google.com/citations?user=qLtFSBUAAAAJ</a></div>
+        <div><b>ORCID</b> <a href="https://orcid.org/0000-0001-5536-5371" target="_blank" rel="noopener">0000-0001-5536-5371</a></div>
+        <div><b>Email</b> <a href="mailto:akaymazozcanli@fsm.edu.tr">akaymazozcanli@fsm.edu.tr</a></div>
     </div>
 
-    <hr style="margin: 30px 0;">
+</main>
 
-    <!-- İLETİŞİM -->
-    <p>
-        <b>Google Scholar:</b> 
-        <a href="https://scholar.google.com/citations?user=qLtFSBUAAAAJ" target="_blank">
-        https://scholar.google.com/citations?user=qLtFSBUAAAAJ</a>
-        <br>
-        <b>ORCID:</b> 
-        <a href="https://orcid.org/0000-0001-5536-5371" target="_blank">
-        0000-0001-5536-5371</a>
-        <br>
-        <b>Email:</b> akaymazozcanli@fsm.edu.tr
-    </p>
-
-</div>
+<footer class="site-footer">
+    <div class="wrap">Asiye Kaymaz Özcanlı · Fatih Sultan Mehmet Vakıf University, Istanbul</div>
+</footer>
 
 </body>
 </html>
-
