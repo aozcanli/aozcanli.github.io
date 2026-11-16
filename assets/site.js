@@ -135,9 +135,112 @@
         host.hidden = false;
     }
 
+
+    function setupCharts() {
+        var hosts = document.querySelectorAll('.chart[data-chart]');
+        if (!hosts.length) { return; }
+        var ns = 'http://www.w3.org/2000/svg';
+
+        function el(name, attrs, parent) {
+            var node = document.createElementNS(ns, name);
+            Object.keys(attrs).forEach(function (k) { node.setAttribute(k, attrs[k]); });
+            if (parent) { parent.appendChild(node); }
+            return node;
+        }
+        function niceMax(v) {
+            var exp = Math.pow(10, Math.floor(Math.log(v) / Math.LN10));
+            var f = v / exp;
+            var step = f <= 1 ? 1 : f <= 2 ? 2 : f <= 5 ? 5 : 10;
+            return step * exp;
+        }
+        function label(parent, x, y, str, anchor, size, fill) {
+            var t = el('text', { x: x, y: y, 'text-anchor': anchor, 'font-family': 'IBM Plex Mono, Menlo, monospace', 'font-size': size, fill: fill }, parent);
+            t.textContent = str;
+            return t;
+        }
+
+        hosts.forEach(function (host) {
+            var cfg = JSON.parse(host.getAttribute('data-chart'));
+            var W = 720, H = 300, L = 46, R = 14, T = 12, B = 30;
+            var svg = el('svg', { viewBox: '0 0 ' + W + ' ' + H, role: 'img', 'aria-label': cfg.alt });
+            var n = cfg.labels.length;
+            var max = 0;
+            if (cfg.type === 'stacked') {
+                for (var i = 0; i < n; i += 1) {
+                    var tot = 0;
+                    cfg.series.forEach(function (sr) { tot += sr.data[i] || 0; });
+                    max = Math.max(max, tot);
+                }
+            } else {
+                cfg.series.forEach(function (sr) { sr.data.forEach(function (v) { if (v !== null) { max = Math.max(max, v); } }); });
+            }
+            var top = niceMax(max * 1.04);
+            var plotW = W - L - R, plotH = H - T - B;
+            function y(v) { return T + plotH - (v / top) * plotH; }
+            var ticks = 5, k;
+            for (k = 0; k <= ticks; k += 1) {
+                var tv = top * k / ticks;
+                el('line', { x1: L, x2: W - R, y1: y(tv), y2: y(tv), stroke: k === 0 ? '#111c26' : '#dde2e8' }, svg);
+                label(svg, L - 6, y(tv) + 4, String(Math.round(tv * 10) / 10), 'end', 11, '#55616d');
+            }
+            var step = plotW / n;
+            cfg.labels.forEach(function (lb, i) {
+                var cx = L + step * i + step / 2;
+                label(svg, cx, H - 10, String(lb), 'middle', 11, '#55616d');
+            });
+            if (cfg.type === 'stacked') {
+                var bw = Math.min(40, step * 0.7);
+                for (var j = 0; j < n; j += 1) {
+                    var acc = 0;
+                    cfg.series.forEach(function (sr) {
+                        var v = sr.data[j] || 0;
+                        if (v > 0) {
+                            var x0 = L + step * j + (step - bw) / 2;
+                            var r = el('rect', { x: x0, y: y(acc + v), width: bw, height: y(acc) - y(acc + v), fill: sr.color }, svg);
+                            el('title', {}, r).textContent = cfg.labels[j] + ' · ' + sr.name + ': ' + v + ' ' + cfg.unit;
+                        }
+                        acc += v;
+                    });
+                }
+            } else {
+                cfg.series.forEach(function (sr) {
+                    var d = '', started = false, last = null;
+                    sr.data.forEach(function (v, i) {
+                        if (v === null) { return; }
+                        var px = L + step * i + step / 2;
+                        d += (started ? 'L' : 'M') + px.toFixed(1) + ' ' + y(v).toFixed(1) + ' ';
+                        started = true;
+                        last = { x: px, y: y(v), v: v };
+                    });
+                    el('path', { d: d, fill: 'none', stroke: sr.color, 'stroke-width': 2.4, 'stroke-linejoin': 'round' }, svg);
+                    sr.data.forEach(function (v, i) {
+                        if (v === null) { return; }
+                        var c = el('circle', { cx: L + step * i + step / 2, cy: y(v), r: 3.4, fill: sr.color }, svg);
+                        el('title', {}, c).textContent = cfg.labels[i] + ' · ' + sr.name + ': ' + v + ' ' + cfg.unit;
+                    });
+                    if (last) { label(svg, last.x, last.y - 9, String(last.v), 'middle', 11.5, sr.color); }
+                });
+            }
+            label(svg, L, T - 1, cfg.unit, 'start', 11, '#55616d').setAttribute('dy', '-1');
+            host.appendChild(svg);
+            var legend = document.createElement('div');
+            legend.className = 'legend-inline';
+            cfg.series.forEach(function (sr) {
+                var item = document.createElement('span');
+                var sw = document.createElement('i');
+                sw.style.background = sr.color;
+                item.appendChild(sw);
+                item.appendChild(document.createTextNode(sr.name));
+                legend.appendChild(item);
+            });
+            host.appendChild(legend);
+        });
+    }
+
     ready(function () {
         setupReveal();
         setupLightbox();
         setupPubChart();
+        setupCharts();
     });
 }());
